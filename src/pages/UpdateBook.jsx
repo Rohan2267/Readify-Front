@@ -44,7 +44,7 @@ const UpdateBook = () => {
 
             
             else {
-                const res = await axios.put("https://readify-fo9g.onrender.com/api/v1/update-book",
+                const res = await axios.put("http://localhost:1000/api/v1/update-book",
                     Data,
                     { headers }
                 )
@@ -72,7 +72,7 @@ const UpdateBook = () => {
         const fetch = async () => {
             try {
                 console.log("Fetching book with ID:", id); 
-                const response = await axios.get(`https://readify-fo9g.onrender.com/api/v1/get-book-by-id/${id}`);
+                const response = await axios.get(`http://localhost:1000/api/v1/get-book-by-id/${id}`);
                 console.log(response);
                 setData(response.data.data);
             } catch (error) {

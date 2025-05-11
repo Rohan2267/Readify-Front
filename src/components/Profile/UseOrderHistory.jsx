@@ -12,7 +12,7 @@ const UseOrderHistory = () => {
   const [OrderHistory, setOrderHistory] = useState()
   useEffect(() => {
     const fetch = async () => {
-      const res = await axios.get("https://readify-fo9g.onrender.com/api/v1/get-order-history",
+      const res = await axios.get("http://localhost:1000/api/v1/get-order-history",
         { headers }
       )
       setOrderHistory(res.data.data);

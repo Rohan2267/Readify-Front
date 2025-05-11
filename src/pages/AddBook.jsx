@@ -36,7 +36,7 @@ const AddBook = () => {
         alert("All fields are requied");
       }
       else {
-        const res = await axios.post("https://readify-fo9g.onrender.com/api/v1/add-book",
+        const res = await axios.post("http://localhost:1000/api/v1/add-book",
           Data,
           { headers }
         )

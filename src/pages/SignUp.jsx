@@ -22,7 +22,7 @@ const SignUp = () => {
         alert("All fields are required")
       }
       else{
-        const response = await axios.post("https://readify-fo9g.onrender.com/api/v1/sign-up",
+        const response = await axios.post("http://localhost:1000/api/v1/sign-up",
           Values
         );
         alert(response.data.message);

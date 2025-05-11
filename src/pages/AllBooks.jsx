@@ -8,7 +8,7 @@ const AllBooks = () => {
   const [Data, setData] = useState();
   useEffect(() => {
     const fetch = async () => {
-      const response = await axios.get("https://readify-fo9g.onrender.com/api/v1/get-all-book")
+      const response = await axios.get("http://localhost:1000/api/v1/get-all-book")
       setData(response.data.data);
       
     }

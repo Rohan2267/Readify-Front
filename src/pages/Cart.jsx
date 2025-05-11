@@ -16,7 +16,7 @@ const Cart = () => {
     const fetch = async () => {
       
       const res = await axios.get(
-        "https://readify-fo9g.onrender.com/api/v1/get-user-cart",
+        "http://localhost:1000/api/v1/get-user-cart",
         { headers}
       )
 
@@ -27,7 +27,7 @@ const Cart = () => {
 
   const deleteItem = async (bookid) => {
     console.log("Deleting book with ID:", bookid); 
-    const res = await axios.put(`https://readify-fo9g.onrender.com/api/v1/remove-from-cart/${bookid}`,
+    const res = await axios.put(`http://localhost:1000/api/v1/remove-from-cart/${bookid}`,
       {},
       { headers}
     )
@@ -49,7 +49,7 @@ const Cart = () => {
   const PlaceOrder = async () => {
     try {
       // console.log("📦 Sending order data:", Cart);
-      const res = await axios.post(`https://readify-fo9g.onrender.com/api/v1/place-order`,
+      const res = await axios.post(`http://localhost:1000/api/v1/place-order`,
         { order: Cart},
       { headers}
       )

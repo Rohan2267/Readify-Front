@@ -11,7 +11,7 @@ const Settings = () => {
   }
 
   const submitAddress = async () => {
-    const res = await axios.put("https://readify-fo9g.onrender.com/api/v1/update-address", Value, { headers })
+    const res = await axios.put("http://localhost:1000/api/v1/update-address", Value, { headers })
     alert(res.data.message);
 
   }
@@ -24,7 +24,7 @@ const Settings = () => {
   const [ProfileData, setProfileData] = useState()
   useEffect(() => {
     const fetch = async () => {
-      const res = await axios.get("https://readify-fo9g.onrender.com/api/v1/get-user-information",
+      const res = await axios.get("http://localhost:1000/api/v1/get-user-information",
         { headers }
       )
       setProfileData(res.data)
