@@ -10,7 +10,7 @@ const BookCard = ({data, favourite}) => {
     bookid: data._id,
   }
   const handleRemoveBook = async () => {
-    const response = await axios.put("http://localhost:1000/api/v1/remove-book-from-favourite",{},
+    const response = await axios.put("https://readify-fo9g.onrender.com/api/v1/remove-book-from-favourite",{},
       { headers})
     alert(response.data.message)
     
