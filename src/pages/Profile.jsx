@@ -25,7 +25,7 @@ const Profile = () => {
 
     const fetch = async () => {
       try {
-        const res = await axios.get("http://localhost:1000/api/v1/get-user-information", { headers });
+        const res = await axios.get("https://readify-fo9g.onrender.com/api/v1/get-user-information", { headers });
   
   
         if (res.data) {

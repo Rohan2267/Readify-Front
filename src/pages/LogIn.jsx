@@ -24,7 +24,7 @@ const LogIn = () => {
         alert("All fields are required")
       }
       else{
-        const response = await axios.post("http://localhost:1000/api/v1/sign-in", Values);
+        const response = await axios.post("https://readify-fo9g.onrender.com/api/v1/sign-in", Values);
          const { _id, role, token } = response.data;
          dispatch(authActions.login());
          dispatch(authActions.changeRole(role));
